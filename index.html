@@ -9,529 +9,526 @@
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:Arial, sans-serif;
-    background:#050505;
-    color:white;
-    overflow-x:hidden;
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0806;
+    color: #ffffff;
+    overflow-x: hidden;
 }
 
-/* ================= NAVIGATION ================= */
-
-nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    padding:18px 6%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(5,5,5,.96);
-    border:1px solid #ff1493;
-    border-radius:0 0 12px 12px;
-    z-index:1000;
-    backdrop-filter:blur(10px);
+html {
+    scroll-padding-top: 80px;
 }
 
-.logo{
-    font-size:30px;
-    color:#ff1493;
-    font-family:cursive;
-    font-weight:bold;
-    text-shadow:0 0 15px #ff1493;
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(11, 8, 6, 0.96);
+    border-bottom: 1px solid #8b5e3c;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
 }
 
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:30px;
+.logo {
+    font-size: 30px;
+    color: #c49a6c;
+    font-family: cursive;
+    font-weight: bold;
+    text-shadow: 0 0 15px #8b5e3c;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    transition:.3s;
-    font-weight:bold;
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
 }
 
-nav a:hover{
-    color:#ff1493;
-    text-shadow:0 0 10px #ff1493;
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
 }
 
-.github-btn{
-    border:1px solid #ff1493;
-    padding:10px 18px;
-    border-radius:7px;
-    color:#ff1493;
+nav a:hover {
+    color: #c49a6c;
 }
 
-/* ================= HERO ================= */
+/* =========================
+   HERO
+========================= */
 
-.hero{
-    min-height:100vh;
-    padding:140px 8% 80px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.hero {
+    min-height: 100vh;
+    padding: 140px 8% 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     background:
-    radial-gradient(circle at 15% 50%,#ff149322,transparent 30%),
-    radial-gradient(circle at 85% 50%,#ff149322,transparent 30%);
+        radial-gradient(circle at 15% 50%, #8b5e3c33, transparent 30%),
+        radial-gradient(circle at 85% 30%, #c49a6c22, transparent 30%),
+        #0b0806;
 }
 
-.hero-container{
-    max-width:1100px;
-    width:100%;
-    display:flex;
-    align-items:center;
-    gap:70px;
-}
-
-/* PROFILE */
-
-.profile{
-    width:290px;
-    height:290px;
-    padding:6px;
-    border-radius:50%;
-    background:#ff1493;
-
-    box-shadow:
-    0 0 20px #ff1493,
-    0 0 50px #ff1493,
-    0 0 100px #ff149355;
-
-    flex-shrink:0;
-}
-
-.profile img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    border-radius:50%;
-    border:5px solid #050505;
+.hero-container {
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* HERO TEXT */
 
-.hero-text small{
-    color:#ff1493;
-    letter-spacing:3px;
-    font-weight:bold;
+.hero-text {
+    max-width: 850px;
 }
 
-.hero-text h1{
-    font-size:65px;
-    margin:15px 0;
+.hero-text small {
+    color: #c49a6c;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 14px;
 }
 
-.hero-text h1 span{
-    color:#ff1493;
-    font-family:cursive;
-    text-shadow:0 0 20px #ff1493;
+.hero-text h1 {
+    font-size: 70px;
+    margin: 18px 0;
+    line-height: 1.1;
 }
 
-.hero-text h2{
-    font-size:20px;
-    letter-spacing:5px;
-    margin-bottom:20px;
+.hero-text h1 span {
+    color: #c49a6c;
+    font-family: cursive;
+    text-shadow: 0 0 20px #8b5e3c;
 }
 
-.hero-text p{
-    color:#aaa;
-    line-height:1.8;
-    max-width:650px;
+.hero-text h2 {
+    font-size: 21px;
+    letter-spacing: 6px;
+    color: #e0c3a0;
+    margin-bottom: 25px;
 }
 
-/* BUTTONS */
-
-.buttons{
-    margin-top:30px;
+.hero-text p {
+    color: #b7aaa0;
+    line-height: 1.9;
+    max-width: 750px;
+    font-size: 16px;
 }
 
-.btn{
-    display:inline-block;
-    padding:14px 25px;
-    margin:5px;
-    border-radius:7px;
-    text-decoration:none;
-    color:white;
-    border:1px solid #ff1493;
-    transition:.3s;
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+    margin-top: 35px;
 }
 
-.btn.primary{
-    background:#ff1493;
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    margin: 5px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #8b5e3c;
+    transition: 0.3s;
 }
 
-.btn:hover{
-    transform:translateY(-4px);
-    box-shadow:0 0 25px #ff1493;
+.btn.primary {
+    background: #8b5e3c;
 }
 
-/* ================= SECTIONS ================= */
-
-section{
-    padding:90px 8%;
-    border-top:1px solid #25101d;
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px #8b5e3c66;
+    background: #a87850;
 }
 
-.section-title{
-    font-size:35px;
-    margin-bottom:40px;
-    border-left:6px solid #ff1493;
-    padding-left:15px;
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    padding: 100px 8%;
+    border-top: 1px solid #2c211a;
 }
 
-.section-title::after{
-    content:"";
-    display:block;
-    width:45px;
-    height:3px;
-    background:#ff1493;
-    margin-top:10px;
+.section-title {
+    font-size: 38px;
+    margin-bottom: 45px;
+    border-left: 5px solid #8b5e3c;
+    padding-left: 15px;
 }
 
-/* ================= ABOUT ================= */
-
-.about{
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap:25px;
+.section-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #c49a6c;
+    margin-top: 12px;
 }
 
-.about-text{
-    padding:25px;
-    color:#aaa;
-    line-height:1.8;
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
 }
 
-.card{
-    background:#090909;
-    border:1px solid #6d1245;
-    border-radius:12px;
-    padding:30px;
-    transition:.3s;
+.about-text {
+    color: #b7aaa0;
+    line-height: 1.8;
 }
 
-.card:hover{
-    border-color:#ff1493;
-    box-shadow:0 0 25px #ff149322;
-    transform:translateY(-5px);
+.card {
+    background: #120e0b;
+    border: 1px solid #4b3526;
+    border-radius: 12px;
+    padding: 30px;
+    transition: 0.3s;
 }
 
-.card h3{
-    color:#ff1493;
-    margin-bottom:15px;
+.card:hover {
+    border-color: #a87850;
+    box-shadow: 0 0 25px #8b5e3c33;
+    transform: translateY(-6px);
 }
 
-.card p{
-    color:#aaa;
-    line-height:1.7;
+.card h3 {
+    color: #c49a6c;
+    margin-bottom: 15px;
+    font-size: 21px;
 }
 
-/* ================= HOBBIES ================= */
-
-.hobbies{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+.card p {
+    color: #aaa099;
+    line-height: 1.7;
 }
 
-.hobby{
-    text-align:center;
-    padding:25px;
-    border:1px solid #5b1740;
-    border-radius:10px;
-    background:#090909;
-    transition:.3s;
+/* =========================
+   HOBBIES
+========================= */
+
+.hobbies {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-.hobby:hover{
-    border-color:#ff1493;
-    transform:translateY(-5px);
-    box-shadow:0 0 20px #ff149322;
+.hobby {
+    text-align: center;
+    padding: 30px 20px;
+    background: #120e0b;
+    border: 1px solid #4b3526;
+    border-radius: 12px;
+    transition: 0.3s;
 }
 
-.hobby-icon{
-    font-size:42px;
-    margin-bottom:15px;
+.hobby:hover {
+    transform: translateY(-6px);
+    border-color: #a87850;
+    box-shadow: 0 0 25px #8b5e3c33;
 }
 
-.hobby h3{
-    color:#ff1493;
-    margin-bottom:10px;
+.hobby-icon {
+    font-size: 42px;
+    margin-bottom: 18px;
 }
 
-.hobby p{
-    color:#aaa;
-    line-height:1.6;
+.hobby h3 {
+    color: #c49a6c;
+    margin-bottom: 10px;
 }
 
-/* ================= SKILLS ================= */
-
-.skills{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:20px;
+.hobby p {
+    color: #aaa099;
+    line-height: 1.6;
 }
 
-.skill{
-    background:#0a0a0a;
-    border:1px solid #681244;
-    padding:25px;
-    border-radius:10px;
-    text-align:center;
-    transition:.3s;
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-.skill:hover{
-    border-color:#ff1493;
-    box-shadow:0 0 20px #ff149344;
-    transform:translateY(-5px);
+.skill {
+    background: #120e0b;
+    border: 1px solid #4b3526;
+    padding: 25px;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
-.skill-icon{
-    font-size:32px;
-    font-weight:bold;
-    color:#ff1493;
-    margin-bottom:15px;
+.skill:hover {
+    border-color: #a87850;
+    box-shadow: 0 0 20px #8b5e3c33;
+    transform: translateY(-5px);
 }
 
-.skill h3{
-    margin-bottom:12px;
+.skill-icon {
+    font-size: 30px;
+    color: #c49a6c;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-.bar{
-    width:100%;
-    height:7px;
-    background:#222;
-    border-radius:10px;
-    overflow:hidden;
-    margin-bottom:8px;
+.skill h3 {
+    margin-bottom: 15px;
 }
 
-.progress{
-    height:100%;
-    background:#ff1493;
-    box-shadow:0 0 10px #ff1493;
+.bar {
+    width: 100%;
+    height: 7px;
+    background: #2a211b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #8b5e3c;
+    box-shadow: 0 0 10px #8b5e3c;
 }
 
 /* LOWER SKILL PERCENTAGES */
 
-.html{
-    width:70%;
+.html {
+    width: 70%;
 }
 
-.css{
-    width:65%;
+.css {
+    width: 65%;
 }
 
-.javascript{
-    width:60%;
+.javascript {
+    width: 60%;
 }
 
-.php{
-    width:55%;
+.php {
+    width: 60%;
 }
 
-.mysql{
-    width:60%;
+.mysql {
+    width: 65%;
 }
 
-/* ================= PROJECT ================= */
+/* =========================
+   INTEREST
+========================= */
 
-.project-container{
-    display:flex;
-    justify-content:center;
+.interest-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
 }
 
-.project{
-    width:850px;
-    display:flex;
-    gap:30px;
-    padding:30px;
-    background:#090909;
-    border:1px solid #681244;
-    border-radius:12px;
-    transition:.3s;
+.interest-box {
+    background: #120e0b;
+    border: 1px solid #4b3526;
+    border-radius: 12px;
+    padding: 30px;
+    transition: 0.3s;
 }
 
-.project:hover{
-    border-color:#ff1493;
-    box-shadow:0 0 30px #ff149333;
-    transform:translateY(-5px);
+.interest-box:hover {
+    transform: translateY(-5px);
+    border-color: #a87850;
 }
 
-.project-image{
-    width:45%;
-    min-height:230px;
-    border-radius:10px;
-    overflow:hidden;
-    border:1px solid #ff1493;
+.interest-box h3 {
+    color: #c49a6c;
+    margin-bottom: 15px;
 }
 
-.project-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.interest-box p {
+    color: #aaa099;
+    line-height: 1.8;
 }
 
-.project-info{
-    flex:1;
+/* =========================
+   PROJECT
+========================= */
+
+.project-container {
+    display: flex;
+    justify-content: center;
 }
 
-.project h3{
-    color:#ff1493;
-    font-size:24px;
-    margin-bottom:15px;
+.project {
+    max-width: 800px;
+    width: 100%;
+    padding: 35px;
+    background: #120e0b;
+    border: 1px solid #4b3526;
+    border-radius: 14px;
+    transition: 0.3s;
 }
 
-.project p{
-    color:#aaa;
-    line-height:1.7;
-    margin-bottom:20px;
+.project:hover {
+    border-color: #a87850;
+    box-shadow: 0 0 30px #8b5e3c33;
+    transform: translateY(-5px);
 }
 
-.tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-bottom:20px;
+.project-icon {
+    font-size: 55px;
+    color: #c49a6c;
+    margin-bottom: 20px;
 }
 
-.tag{
-    border:1px solid #ff1493;
-    color:#ff1493;
-    padding:6px 12px;
-    border-radius:5px;
-    font-size:13px;
+.project h3 {
+    color: #c49a6c;
+    font-size: 25px;
+    margin-bottom: 15px;
 }
 
-/* ================= GITHUB ================= */
-
-.github-section{
-    text-align:center;
+.project p {
+    color: #aaa099;
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
-.github-card{
-    max-width:700px;
-    margin:auto;
-    padding:40px;
-    background:#090909;
-    border:1px solid #ff1493;
-    border-radius:12px;
-    box-shadow:0 0 25px #ff149322;
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.github-card h2{
-    color:#ff1493;
-    margin-bottom:15px;
+.tag {
+    padding: 8px 14px;
+    border: 1px solid #6b4a32;
+    border-radius: 20px;
+    color: #d0b08e;
+    font-size: 13px;
 }
 
-.github-card p{
-    color:#aaa;
-    line-height:1.7;
-    margin-bottom:25px;
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 35px;
+    background: #080604;
+    border-top: 1px solid #2c211a;
+    color: #887b70;
 }
 
-/* ================= FOOTER ================= */
-
-footer{
-    text-align:center;
-    padding:25px;
-    border-top:1px solid #5b1740;
-    color:#888;
+footer span {
+    color: #c49a6c;
 }
 
-footer span{
-    color:#ff1493;
-    font-family:cursive;
-}
+/* =========================
+   RESPONSIVE
+========================= */
 
-/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
 
-@media(max-width:900px){
-
-    nav ul{
-        gap:12px;
+    nav {
+        padding: 15px 5%;
     }
 
-    .hero-container{
-        flex-direction:column;
-        text-align:center;
+    nav ul {
+        gap: 15px;
     }
 
-    .hero-text p{
-        margin:auto;
+    nav a {
+        font-size: 13px;
     }
 
-    .about{
-        grid-template-columns:1fr;
+    .hero-text h1 {
+        font-size: 55px;
     }
 
-    .hobbies{
-        grid-template-columns:1fr 1fr;
+    .about {
+        grid-template-columns: 1fr;
     }
 
-    .skills{
-        grid-template-columns:1fr 1fr;
+    .hobbies {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .project{
-        flex-direction:column;
-    }
-
-    .project-image{
-        width:100%;
-        height:250px;
+    .skills {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-@media(max-width:600px){
+@media (max-width: 600px) {
 
-    nav{
-        padding:15px 4%;
+    nav {
+        position: relative;
+        flex-direction: column;
+        gap: 15px;
     }
 
-    nav ul{
-        display:none;
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .github-btn{
-        padding:8px 12px;
-        font-size:13px;
+    .hero {
+        padding-top: 80px;
     }
 
-    .hero{
-        padding:120px 5% 60px;
+    .hero-text h1 {
+        font-size: 42px;
     }
 
-    .profile{
-        width:220px;
-        height:220px;
+    .hero-text h2 {
+        font-size: 15px;
+        letter-spacing: 3px;
     }
 
-    .hero-text h1{
-        font-size:45px;
+    .hobbies {
+        grid-template-columns: 1fr;
     }
 
-    .hobbies,
-    .skills{
-        grid-template-columns:1fr;
+    .skills {
+        grid-template-columns: 1fr;
     }
 
-    section{
-        padding:70px 5%;
+    .interest-container {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 70px 6%;
+    }
+
+    .section-title {
+        font-size: 30px;
     }
 }
 
@@ -540,379 +537,389 @@ footer span{
 
 <body>
 
-<!-- ================= NAVIGATION ================= -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
-<div class="logo">Cassandra.</div>
+    <div class="logo">Cassandra.</div>
 
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#hobbies">Hobbies</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#project">Project</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-<a
-class="github-btn"
-href="https://github.com/queencssndraquino26-hub"
-target="_blank">
-GitHub
-</a>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#interest">Interest</a></li>
+        <li><a href="#project">Project</a></li>
+    </ul>
 
 </nav>
 
 
-<!-- ================= HOME ================= -->
+<!-- =========================
+     HOME
+========================= -->
 
 <section class="hero" id="home">
 
-<div class="hero-container">
+    <div class="hero-container">
 
-<div class="profile">
+        <div class="hero-text">
 
-<img src="profile.jpg" alt="Cassandra Profile">
+            <small>WELCOME TO MY PORTFOLIO</small>
 
-</div>
+            <h1>
+                Hi, I'm <span>Cassandra</span>
+            </h1>
 
-<div class="hero-text">
+            <h2>
+                COMPUTER SCIENCE STUDENT
+            </h2>
 
-<small>WELCOME TO MY PORTFOLIO</small>
+            <p>
+                I am a Computer Science student who enjoys learning
+                programming, creating digital projects, and exploring
+                new ideas in technology. I am continuously improving
+                my skills and gaining experience through different
+                projects and activities.
+            </p>
 
-<h1>
-Hi, I'm
-<span>Cassandra</span>
-</h1>
+            <div class="buttons">
 
-<h2>COMPUTER SCIENCE STUDENT</h2>
+                <a href="#project" class="btn primary">
+                    Explore My Portfolio →
+                </a>
 
-<p>
-I enjoy creating websites, learning programming,
-designing digital systems, and exploring new
-technologies that can make life easier.
-</p>
+                <a href="#project" class="btn">
+                    View My Work &lt;/&gt;
+                </a>
 
-<div class="buttons">
+            </div>
 
-<a href="#about" class="btn primary">
-Explore My Portfolio →
-</a>
+        </div>
 
-<a href="#project" class="btn">
-View My Work &lt;/&gt;
-</a>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- ================= ABOUT ================= -->
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about">
 
-<h2 class="section-title">ABOUT ME</h2>
+    <h2 class="section-title">About Me</h2>
 
-<div class="about">
+    <div class="about">
 
-<div class="about-text">
+        <div class="card">
 
-<p>
-I'm a Computer Science student who enjoys learning
-new things and building creative projects.
-I love turning ideas into reality through
-code and technology.
-</p>
+            <h3>Who I Am</h3>
 
-</div>
+            <p>
+                I am Cassandra, a Computer Science student with an
+                interest in technology, programming, and digital
+                systems. I enjoy learning new things and improving
+                my skills through practice.
+            </p>
 
-
-<div class="card">
-
-<h3>Who Am I?</h3>
-
-<p>
-A passionate and dedicated student who enjoys
-coding, designing, and learning new technologies.
-</p>
-
-</div>
+        </div>
 
 
-<div class="card">
+        <div class="card">
 
-<h3>My Goal</h3>
+            <h3>My Goal</h3>
 
-<p>
-To become a skilled developer and create useful
-digital systems that can help people.
-</p>
+            <p>
+                My goal is to continue developing my technical skills
+                and create useful, creative, and user-friendly
+                digital projects.
+            </p>
 
-</div>
+        </div>
 
 
-<div class="card">
+        <div class="card">
 
-<h3>My Passion</h3>
+            <h3>My Learning</h3>
 
-<p>
-Web development, problem solving, UI/UX design,
-and exploring new technology.
-</p>
+            <p>
+                I am learning different programming concepts,
+                website development, database management, and
+                system development.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </section>
 
 
-<!-- ================= HOBBIES ================= -->
+<!-- =========================
+     HOBBIES
+========================= -->
 
 <section id="hobbies">
 
-<h2 class="section-title">HOBBIES & INTERESTS</h2>
+    <h2 class="section-title">My Hobbies</h2>
 
-<div class="hobbies">
+    <div class="hobbies">
 
-<div class="hobby">
+        <div class="hobby">
 
-<div class="hobby-icon">🎵</div>
+            <div class="hobby-icon">🎮</div>
 
-<h3>Listening to Music</h3>
+            <h3>Playing Games</h3>
 
-<p>
-Music helps me relax, stay motivated,
-and enjoy my free time.
-</p>
+            <p>
+                I enjoy playing games during my free time
+                for entertainment and relaxation.
+            </p>
 
-</div>
-
-
-<div class="hobby">
-
-<div class="hobby-icon">🔤</div>
-
-<h3>Playing Scrabble</h3>
-
-<p>
-I enjoy playing Scrabble because it challenges
-my mind, vocabulary, and creativity.
-</p>
-
-</div>
+        </div>
 
 
-<div class="hobby">
+        <div class="hobby">
 
-<div class="hobby-icon">💻</div>
+            <div class="hobby-icon">🎵</div>
 
-<h3>Coding</h3>
+            <h3>Listening to Music</h3>
 
-<p>
-I enjoy creating websites and learning
-how digital systems work.
-</p>
+            <p>
+                Music helps me relax and enjoy my free time.
+            </p>
 
-</div>
+        </div>
 
 
-<div class="hobby">
+        <div class="hobby">
 
-<div class="hobby-icon">📚</div>
+            <div class="hobby-icon">📚</div>
 
-<h3>Reading</h3>
+            <h3>Reading</h3>
 
-<p>
-I enjoy reading and learning new things
-that can improve my skills.
-</p>
+            <p>
+                I enjoy reading and learning new information
+                that can help me improve.
+            </p>
 
-</div>
+        </div>
 
-</div>
+
+        <div class="hobby">
+
+            <div class="hobby-icon">♟️</div>
+
+            <h3>Playing Scrabble</h3>
+
+            <p>
+                I enjoy playing Scrabble because it helps improve
+                vocabulary, thinking, and strategy.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- ================= SKILLS ================= -->
+<!-- =========================
+     SKILLS
+========================= -->
 
 <section id="skills">
 
-<h2 class="section-title">MY SKILLS</h2>
+    <h2 class="section-title">My Skills</h2>
 
-<div class="skills">
+    <div class="skills">
 
+        <div class="skill">
 
-<div class="skill">
+            <div class="skill-icon">HTML</div>
 
-<div class="skill-icon">HTML</div>
+            <h3>HTML</h3>
 
-<h3>HTML</h3>
+            <div class="bar">
+                <div class="progress html"></div>
+            </div>
 
-<div class="bar">
-<div class="progress html"></div>
-</div>
-
-<p>70%</p>
-
-</div>
+        </div>
 
 
-<div class="skill">
+        <div class="skill">
 
-<div class="skill-icon">CSS</div>
+            <div class="skill-icon">CSS</div>
 
-<h3>CSS</h3>
+            <h3>CSS</h3>
 
-<div class="bar">
-<div class="progress css"></div>
-</div>
+            <div class="bar">
+                <div class="progress css"></div>
+            </div>
 
-<p>65%</p>
-
-</div>
+        </div>
 
 
-<div class="skill">
+        <div class="skill">
 
-<div class="skill-icon">JS</div>
+            <div class="skill-icon">JS</div>
 
-<h3>JavaScript</h3>
+            <h3>JavaScript</h3>
 
-<div class="bar">
-<div class="progress javascript"></div>
-</div>
+            <div class="bar">
+                <div class="progress javascript"></div>
+            </div>
 
-<p>60%</p>
-
-</div>
+        </div>
 
 
-<div class="skill">
+        <div class="skill">
 
-<div class="skill-icon">PHP</div>
+            <div class="skill-icon">PHP</div>
 
-<h3>PHP</h3>
+            <h3>PHP</h3>
 
-<div class="bar">
-<div class="progress php"></div>
-</div>
+            <div class="bar">
+                <div class="progress php"></div>
+            </div>
 
-<p>55%</p>
-
-</div>
+        </div>
 
 
-<div class="skill">
+        <div class="skill">
 
-<div class="skill-icon">SQL</div>
+            <div class="skill-icon">SQL</div>
 
-<h3>MySQL</h3>
+            <h3>MySQL</h3>
 
-<div class="bar">
-<div class="progress mysql"></div>
-</div>
+            <div class="bar">
+                <div class="progress mysql"></div>
+            </div>
 
-<p>60%</p>
+        </div>
 
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- ================= PROJECT ================= -->
+<!-- =========================
+     INTEREST
+========================= -->
+
+<section id="interest">
+
+    <h2 class="section-title">My Interest</h2>
+
+    <div class="interest-container">
+
+        <div class="interest-box">
+
+            <h3>Web Development</h3>
+
+            <p>
+                I am interested in creating websites that are
+                simple, attractive, responsive, and easy to use.
+            </p>
+
+        </div>
+
+
+        <div class="interest-box">
+
+            <h3>Programming</h3>
+
+            <p>
+                I am interested in learning programming languages
+                and understanding how applications and systems work.
+            </p>
+
+        </div>
+
+
+        <div class="interest-box">
+
+            <h3>Digital Systems</h3>
+
+            <p>
+                I am interested in developing digital systems that
+                can make tasks easier, faster, and more organized.
+            </p>
+
+        </div>
+
+
+        <div class="interest-box">
+
+            <h3>Technology</h3>
+
+            <p>
+                I enjoy discovering new technologies and learning
+                how they can be used in real-world projects.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROJECT
+========================= -->
 
 <section id="project">
 
-<h2 class="section-title">MY PROJECT</h2>
+    <h2 class="section-title">My Project</h2>
 
-<div class="project-container">
+    <div class="project-container">
 
-<div class="project">
+        <div class="project">
 
-<div class="project-image">
+            <div class="project-icon">
+                &lt;/&gt;
+            </div>
 
-<img src="profile.jpg" alt="Portfolio Project">
+            <h3>Digitalized Attendance Monitoring System</h3>
 
-</div>
+            <p>
+                A digital attendance monitoring system designed
+                to help teachers record and manage student attendance
+                more efficiently. The system stores attendance
+                records digitally and helps reduce errors and
+                unnecessary paperwork.
+            </p>
 
+            <div class="project-tags">
 
-<div class="project-info">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">PHP</span>
+                <span class="tag">MySQL</span>
 
-<h3>Personal Portfolio Website</h3>
+            </div>
 
-<p>
-A personal portfolio website created to showcase
-my profile, skills, hobbies, and project.
-Built using HTML and CSS.
-</p>
+        </div>
 
-<div class="tags">
-
-<span class="tag">HTML</span>
-<span class="tag">CSS</span>
-<span class="tag">JavaScript</span>
-<span class="tag">Web Design</span>
-
-</div>
-
-<a
-href="https://github.com/queencssndraquino26-hub"
-target="_blank"
-class="btn">
-View Project →
-</a>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- ================= CONTACT ================= -->
-
-<section id="contact" class="github-section">
-
-<h2 class="section-title">LET'S CONNECT</h2>
-
-<div class="github-card">
-
-<h2>GitHub</h2>
-
-<p>
-You can view my projects and portfolio
-through my GitHub profile.
-</p>
-
-<a
-href="https://github.com/queencssndraquino26-hub"
-target="_blank"
-class="btn primary">
-Visit My GitHub →
-</a>
-
-</div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-© 2026 <span>Cassandra.</span> All Rights Reserved.
+    <p>
+        © 2026 <span>Cassandra</span> | Personal Portfolio
+    </p>
 
 </footer>
 
